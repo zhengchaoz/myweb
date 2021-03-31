@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>菜单</title>
+        <style type="text/css">
+            ul {
+                /* 去除圆点 */
+                list-style: none;
+            }
+
+            ul li {
+                /* 左浮动 */
+                float: left;
+                margin-right: 1rem;
+                background-color: green;
+                /* 上右下左 */
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                font-weight: bolder;
+                border-radius: 0.5rem;
+            }
+
+            li:hover {
+                background-color: red;
+            }
+
+            a {
+                color: white;
+                /* 取消下划线 */
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a target="_blank" href="https://www.runoob.com/html/html-tutorial.html">maven</a></li>
+            <li><a target="_self" href="https://www.runoob.com/css/css-tutorial.html">Git</a></li>
+            <li><a target="_top" href="https://www.runoob.com/js/js-tutorial.html">数据结构</a></li>
+        </ul>
+    </body>
+</html>

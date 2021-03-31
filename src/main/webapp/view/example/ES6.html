@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ES6</title>
+        <script>
+            /*let a = 50
+            const b = 10;
+            var c = 10;
+
+            function test(a, b) {
+                console.log(a + "----------" + b);
+            }
+
+            var test2 = function (c) {
+                console.log(c);
+            }
+
+            var d = function () {
+
+            }
+
+            var g = () => console.log("金合欢花或");
+            g();
+
+            let zc = 10;
+            var g1 = (a) => console.log(a + "--------");
+            g1(zc);
+
+            var g2 = (a, b) => {
+                console.log(a);
+                console.log(b);
+            }
+            g2("asd", "wqeq");
+
+            let g3 = (a) => a + "呵呵哈哈哈";
+            console.log(g3("lalalalala"))
+
+            let g4 = d => d;
+            console.log(g4("就看就看就看就看就看"))*/
+
+            /*var Person = {
+                'age': 18,
+                'sayHello': function () {
+                    setTimeout(function () {
+                        console.log(this);
+                    });
+                }
+            };
+            // let age = 20;
+            Person.sayHello();  // 20
+
+            var Person1 = {
+                'age1': 18,
+                'sayHello': function () {
+                    setTimeout(()=>{
+                        console.log(this);
+                    });
+                }
+            };
+            // let age1 = 20;
+            Person1.sayHello();  // 18
+
+            var Person3 = {
+                'age': 18,
+                'sayHello': ()=>{
+                    console.log(this);
+                }
+            };
+            // var age = 20;
+            Person3.sayHello();  // 20
+            // 此时 this 指向的是全局对象
+
+            var Person4 = {
+                'age': 18,
+                'sayHello': function () {
+                    console.log(this);
+                }
+            };
+            // var age = 20;
+            Person4.sayHello();   // 18
+            // 此时的 this 指向 Person1 对象*/
+
+            let car = new Object();
+            let man = {};
+
+            car.forEach(function (item) {
+
+            })
+
+            function foo1(x, y, z) {
+                console.log(x, y, z);
+            }
+
+            let arr = [1, 2];
+            foo1(...arr);
+
+            function foo(...args) {
+                console.log(args);
+            }
+
+            foo(1, 2, 3, 4, 5);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

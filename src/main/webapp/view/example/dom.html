@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+        <script>
+            let title = document.title;
+            // window.alert(title);
+            console.info(title);
+        </script>
+    </head>
+    <body>
+        <div>
+            <a class="label" name="哈哈" href="http://www.taobao.com" target="_blank">淘宝</a>
+            <a class="label" name="jd" href="http://www.jd.com" target="_blank">京东</a>
+            <a id="hh" name="哈哈" href="http://www.pinduoduo.com" target="_blank">拼多多</a>
+        </div>
+
+        <script>
+            console.info("getElementsByTagName--------------------");
+            for (let elementsByTagNameElement of document.getElementsByTagName('a')) {
+                console.log(elementsByTagNameElement.href);
+            }
+            console.info("getElementsByName--------------------");
+            for (let elementsByNameElement of document.getElementsByName('哈哈')) {
+                console.info(elementsByNameElement);
+            }
+            console.info("getElementsByClassName--------------------");
+            for (let elementsByClassNameElement of document.getElementsByClassName(`label`)) {
+                console.info(elementsByClassNameElement);
+            }
+            console.info("getElementById--------------------");
+            console.info(document.getElementById(`hh`));
+        </script>
+    </body>
+</html>

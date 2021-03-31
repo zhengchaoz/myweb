@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>永和大王</title>
+        <!-- css样式 -->
+        <style type="text/css">
+            /* id选择器 */
+            #outermost {
+                width: 400px;
+                height: 800px;
+                /* 边框（实线） */
+                /*border: 1px solid black;*/
+                /* div居中显示 */
+                margin: 0px auto;
+            }
+
+            /* class选择器 */
+            .vertical_top {
+                /* 文字垂直向上 */
+                vertical-align: top;
+            }
+            .align_right {
+                /* 文字垂直向上 */
+                text-align: right;
+            }
+            td:last-of-type {
+                text-align: right;
+            }
+            /* 虚线 */
+            .dashed {
+                border-top: 1px dashed black;
+            }
+            .dashed_bottom {
+                border-bottom: 1px dashed black;
+            }
+            /* 外间距 */
+            .margin {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            /* 内间距 */
+            .padding {
+                padding-left: 20px;
+            }
+            .width_350 {
+                width: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outermost">
+            <h4 style="font-weight: normal;">顾客联</h4>
+            <div style="font-size: 25px;font-weight: bolder;">请您留意取餐账单号</div>
+            <div style="text-align: center;">自取顾客联</div>
+            <div>永和大王（北三环西路店）</div>
+            <div>010-62112313</div>
+            <div style="text-align: center;">--结账单--</div>
+            <div style="font-size: 25px;font-weight: bolder;">账单号:P000009</div>
+            <div>账单类型：堂食</div>
+            <div>人数：1</div>
+            <div>收银员：张静</div>
+            <div>开单时间：2021年3月29日14:01:47</div>
+            <div>结账时间：2021年3月29日14:01:55</div>
+            <div class="dashed_bottom margin width_350"></div>
+            <table class="width_350">
+                <tr>
+                    <td>数量</td>
+                    <td>品项</td>
+                    <td>金额</td>
+                </tr>
+                <tr>
+                    <td class="vertical_top">1</td>
+                    <td>
+                        油条豆浆套餐<br/>
+                        1 X -- 非凡油条<br/>
+                        1 X -- 现磨豆浆（热/甜）
+                    </td>
+                    <td class="vertical_top">7.00</td>
+                </tr>
+            </table>
+            <div class="dashed margin width_350"></div>
+            <table class="width_350">
+                <tr>
+                    <td style="width: 70%;">支付宝花呗亿元早餐</td>
+                    <td style="width: 15%;">1</td>
+                    <td style="width: 15%;">-3.00</td>
+                </tr>
+                <tr>
+                    <td>合计</td>
+                    <td></td>
+                    <td>4.00</td>
+                </tr>
+                <tr>
+                    <td>支付宝</td>
+                    <td></td>
+                    <td>1.00</td>
+                </tr>
+                <tr>
+                    <td>支付宝补贴</td>
+                    <td></td>
+                    <td>3.00</td>
+                </tr>
+            </table>
+            <div class="dashed margin width_350"></div>
+            <div>打印时间：2021年3月29日14:01:47</div>
+            <hr class="dashed margin width_350"/>
+            <div class="note">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                根据相关税法规定，电子发票的开票日期同网上申请电子发票的日期，
+                如您需要当日的电子发票请务必在消费当日通过扫描下方二维码，
+                根据指引步骤开具您的增值税电子普通发票。此二维码30天有效，
+                扫描时请保持小票平整。
+            </div>
+            <img src="../../image/qr.png">
+        </div>
+    </body>
+</html>
