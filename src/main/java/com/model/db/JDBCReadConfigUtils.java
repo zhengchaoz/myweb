@@ -26,7 +26,7 @@ public class JDBCReadConfigUtils {
 
     private static JDBCReadConfigUtils jdbcConfig;
 
-    public static JDBCReadConfigUtils getJDBCConfig() {
+    public static JDBCReadConfigUtils getInstance() {
         if (jdbcConfig == null) {
             jdbcConfig = new JDBCReadConfigUtils();
         }
@@ -37,7 +37,7 @@ public class JDBCReadConfigUtils {
     private JDBCReadConfigUtils() {
         InputStream resource = null;
         try {
-            resource = getClass().getClassLoader().getResourceAsStream("jdbc-employees.properties");
+            resource = getClass().getClassLoader().getResourceAsStream("jdbc.properties");
 
             Properties properties = new Properties();
             properties.load(resource);

@@ -14,6 +14,8 @@ public class JDBCUtils {
 
     /**
      * 通过反射创建Driver对象，通过Driver的connect方法获取数据库连接
+     * <p>
+     * 请使用数据库连接池：DBCPUtils或C3P0Utils
      *
      * @return
      * @throws SQLException
@@ -21,14 +23,15 @@ public class JDBCUtils {
      * @throws IllegalAccessException
      * @throws InstantiationException
      */
+    @Deprecated
     public static Connection getConnectionDriver() throws SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-        return ((Driver) Class.forName(JDBCReadConfigUtils.getJDBCConfig().getDriver()).newInstance()).connect(JDBCReadConfigUtils.getJDBCConfig().getJdbcUrl(),
+        return ((Driver) Class.forName(JDBCReadConfigUtils.getInstance().getDriver()).newInstance()).connect(JDBCReadConfigUtils.getInstance().getJdbcUrl(),
                 ((BiFunction<String, String, Properties>) (user, password) -> {
                     Properties properties = new Properties();
                     properties.put("user", user);
                     properties.put("password", password);
                     return properties;
-                }).apply(JDBCReadConfigUtils.getJDBCConfig().getUser(), JDBCReadConfigUtils.getJDBCConfig().getPassword()));
+                }).apply(JDBCReadConfigUtils.getInstance().getUser(), JDBCReadConfigUtils.getInstance().getPassword()));
     }
 
     /**
@@ -37,13 +40,16 @@ public class JDBCUtils {
      * DataSource接口是JDBC 2.0 API中的新功能.
      * 应用程序不再需要使用Class.forName()显式加载JDBC驱动程序.
      * Class.forName("com.mysql.cj.jdbc.Driver");
+     * <p>
+     * 请使用数据库连接池：DBCPUtils或C3P0Utils
      *
      * @return
      * @throws SQLException
      */
+    @Deprecated
     public static Connection getConnectionDriverManager() throws SQLException {
-        return DriverManager.getConnection(JDBCReadConfigUtils.getJDBCConfig().getJdbcUrl(), JDBCReadConfigUtils.getJDBCConfig().getUser(),
-                JDBCReadConfigUtils.getJDBCConfig().getPassword());
+        return DriverManager.getConnection(JDBCReadConfigUtils.getInstance().getJdbcUrl(), JDBCReadConfigUtils.getInstance().getUser(),
+                JDBCReadConfigUtils.getInstance().getPassword());
     }
 
     /**

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <form action="http://localhost:8080/myweb_war_exploded/hello-servlet" method="post">
+            <h1>学生信息管理系统</h1>
+            <div>
+                <label>姓名：</label>
+                <input name="name" type="text">
+            </div>
+            <div>
+                <label>年龄：</label>
+                <input name="age" type="number">
+            </div>
+            <div>
+                <label>性别：</label>
+                <input name="sex" value="0" type="radio">男
+                <input name="sex" value="1" type="radio">女
+            </div>
+            <div>
+                <label>爱好：</label>
+                <input name="hobby" value="0" type="checkbox">乒乓球
+                <input name="hobby" value="1" type="checkbox">爬山
+                <input name="hobby" value="2" type="checkbox">唱歌
+            </div>
+            <div>
+                <label>学历：</label>
+                <select>
+                    <option value="0" selected="selected">请选择</option>
+                    <option value="1">小学</option>
+                    <option value="2">初中</option>
+                    <option value="3">高中</option>
+                    <option value="4">大学</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="保存">
+                <input type="button" value="取消">
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ajax练习</title>
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let jsonStr = '[{"p":"17999.00","op":"17999.00","cbf":"0","id":"J_100010378153","m":"100000.00"}]';
+        let info = JSON.parse(jsonStr);
+        let p = info[0].p;
+        let id = info[0].id;
+
+        console.log(p);
+        console.log(id);
+    </script>
+</html>
