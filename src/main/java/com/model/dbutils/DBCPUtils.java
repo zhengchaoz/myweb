@@ -1,4 +1,4 @@
-package com.model.db;
+package com.model.dbutils;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;

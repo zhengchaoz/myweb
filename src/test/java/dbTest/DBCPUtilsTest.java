@@ -1,6 +1,6 @@
 package dbTest;
 
-import com.model.db.DBCPUtils;
+import com.model.dbutils.DBCPUtils;
 import org.junit.Test;
 
 import java.sql.Connection;

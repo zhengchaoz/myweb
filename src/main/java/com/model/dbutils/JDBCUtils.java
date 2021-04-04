@@ -1,4 +1,4 @@
-package com.model.db;
+package com.model.dbutils;
 
 import java.sql.*;
 import java.util.Properties;

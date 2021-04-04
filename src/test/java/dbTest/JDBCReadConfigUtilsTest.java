@@ -1,9 +1,7 @@
 package dbTest;
 
-import com.model.db.JDBCReadConfigUtils;
+import com.model.dbutils.JDBCReadConfigUtils;
 import org.junit.Test;
-
-import java.io.InputStream;
 
 /**
  * @user Administrator
@@ -19,6 +17,7 @@ public class JDBCReadConfigUtilsTest {
         System.out.println(JDBCReadConfigUtils.getInstance().getPassword());
         System.out.println(JDBCReadConfigUtils.getInstance() == JDBCReadConfigUtils.getInstance());
         System.out.println(JDBCReadConfigUtils.getInstance().equals(JDBCReadConfigUtils.getInstance()));
+        System.out.println(JDBCReadConfigUtils.getInstance().getDbName().equals(""));
     }
 
 }

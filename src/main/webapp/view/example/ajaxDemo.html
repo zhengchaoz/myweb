@@ -18,5 +18,17 @@
 
         console.log(p);
         console.log(id);
+
+        $(function () {
+            $.ajax({
+                type: "get",
+                url: "https://p.3.cn/prices/mgets?skuIds=J_100010378153",
+                dataType: "jsonp",
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+
+        });
     </script>
 </html>

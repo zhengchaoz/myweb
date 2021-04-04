@@ -1,4 +1,4 @@
-package com.model.db;
+package com.model.dbutils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,6 +23,7 @@ public class JDBCReadConfigUtils {
     private String jdbcUrl;
     private String user;
     private String password;
+    private String dbName;
 
     private static JDBCReadConfigUtils jdbcConfig;
 
@@ -46,6 +47,7 @@ public class JDBCReadConfigUtils {
             jdbcUrl = properties.getProperty("jdbcUrl");
             user = properties.getProperty("user");
             password = properties.getProperty("password");
+            dbName = properties.getProperty("dbname");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -73,6 +75,10 @@ public class JDBCReadConfigUtils {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getDbName() {
+        return dbName;
     }
 
     @Override

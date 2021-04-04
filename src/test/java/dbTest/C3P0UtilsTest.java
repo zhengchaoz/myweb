@@ -1,6 +1,7 @@
 package dbTest;
 
-import com.model.db.C3P0Utils;
+import com.model.dbutils.C3P0Utils;
+import com.model.dbutils.JDBCReadConfigUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -25,8 +26,8 @@ public class C3P0UtilsTest {
         try {
             connection1 = C3P0Utils.getConnection();
             connection2 = C3P0Utils.getConnection();
-            connection3 = C3P0Utils.getConnection("mydb");
-            connection4 = C3P0Utils.getConnection("mydb");
+            connection3 = C3P0Utils.getConnection();
+            connection4 = C3P0Utils.getConnection();
 
             System.out.println(connection1);
             System.out.println(connection2);

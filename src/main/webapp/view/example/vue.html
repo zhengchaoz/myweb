@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue练习</title>
+        <script src="../../js/vue.js"></script>
+        <script src="../../js/jquery.min.js"></script>
+        <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- View -->
+        <h1>{{message}}</h1>
+        <div id="d" v-cloak>
+            <h2>{{message}}</h2>
+            <h3>{{message}}</h3>
+            <h4>{{message}}</h4>
+            <h5>{{message}}</h5>
+
+            <label for="message">双向监听</label><input type="text" id="message" v-model="message"/>
+        </div>
+        <div>
+            <p id="p">{{args}}</p>
+        </div>
+
+        <div id="obj">
+            <p>{{name}}, {{age}}</p>
+            <p>{{hobby}}, {{hobby.length}}</p>
+            <P>{{hobby[0]}}</P>
+            <P>{{hobby[hobby.length - 1]}}</P>
+            <p v-for="o in hobby">{{o}}</p>
+            <p v-for="o, i in hobby">{{i}} - {{o}}</p>
+            <p>{{girl.name}}</p>
+            <p>{{girl.age}}</p>
+            <p v-if="girl.age>=20">哈哈哈哈</p>
+            <p v-if="girl.age<20">哈哈哈哈</p>
+            <p v-if="money>=1900"></p>
+            <p v-else-if="money>=1900"></p>
+            <a :href="url" target="_blank">abc</a>
+            <a v-bind:href="url" target="_blank">abc</a>
+            <button v-on:click="show">点啊</button>
+        </div>
+    </body>
+    <script>
+        /* Model */
+        let data = {
+            message: "你好，Vue！"
+        };
+        /* ViewModel */
+        let v = new Vue({
+            el: "#d",
+            data: data
+        });
+
+        let h2 = new Vue({
+            el: "#p",
+            data: {
+                args: "再见，Vue！"
+            }
+        });
+
+        let obj = new Vue({
+            el: "#obj",
+            data: {
+                address: "太平路33号",
+                name: "张三",
+                age: 29,
+                url: "http://act.codeboy.com/",
+                money: 1200,
+                hobby: ["红", "黑", "紫"],
+                girl: {
+                    name: "翠花",
+                    age: 32
+                }
+            },
+            methods: {
+                show: function() {
+                    console.log("看看看")
+                }
+            }
+        })
+    </script>
+</html>

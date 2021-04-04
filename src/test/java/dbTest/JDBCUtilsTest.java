@@ -1,6 +1,6 @@
 package dbTest;
 
-import com.model.db.JDBCUtils;
+import com.model.dbutils.JDBCUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -19,14 +19,8 @@ public class JDBCUtilsTest {
         Connection driver = null;
         try {
             driver = JDBCUtils.getConnectionDriver();
-        } catch (SQLException throwable) {
+        } catch (SQLException | ClassNotFoundException | IllegalAccessException | InstantiationException throwable) {
             throwable.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
         } finally {
             try {
                 if (driver != null) {
